@@ -73,6 +73,8 @@ static CoreErrors GuessBodylessErrorType(Aws::Http::HttpResponseCode responseCod
         return CoreErrors::ACCESS_DENIED;
     case HttpResponseCode::NOT_FOUND:
         return CoreErrors::RESOURCE_NOT_FOUND;
+    case HttpResponseCode::SERVICE_UNAVAILABLE:
+        return CoreErrors::SERVICE_UNAVAILABLE;
     default:
         return CoreErrors::UNKNOWN;
     }
